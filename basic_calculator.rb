@@ -1,5 +1,5 @@
 def multiply (firts_num, second_num)
-  firts_num.to_f * second_num.to_f
+  firts_num.to_i * second_num.to_i
 end
 
 def divide (firts_num, second_num)
@@ -7,11 +7,11 @@ def divide (firts_num, second_num)
 end
 
 def add (firts_num, second_num)
-  firts_num.to_f + second_num.to_f
+  firts_num.to_i + second_num.to_i
 end
 
 def subtract (firts_num, second_num)
-  firts_num.to_f - second_num.to_f
+  firts_num.to_i - second_num.to_i
 end
 
 def modulo (firts_num, second_num)
@@ -27,13 +27,31 @@ num_1 = gets.chomp
 puts "Enter your second number"
 num_2 = gets.chomp
 
-puts "Multiplication of your two numbers is #{multiply(num_1, num_2)}"
+puts "Select 1 for Multiplication, 2 for Division, 3 for Addition, 4 for Subtraction, 5 for Modulo"
 
-puts "Division of your two numbers is #{divide(num_1, num_2)}"
+user_entry = gets.chomp
 
-puts "Addition of your two numbers is #{add(num_1, num_2)}"
+if user_entry == "1"
+  puts "You have selected multiply"
+  puts "The output of #{num_1} and #{num_2} is #{multiply(num_1, num_2)}" 
 
-puts "Subtraction of your two numbers is #{subtract(num_1, num_2)}"
+elsif user_entry == "2"
+  puts "You have selected divide"
+  puts "The output of #{num_1} and #{num_2} is #{divide(num_1, num_2)}"
 
-puts "Modulo of your two numbers is #{modulo(num_1, num_2)}"
-  
+elsif user_entry == "3"
+  puts "You have selected Addition"
+  puts "The output of #{num_1} and #{num_2} is #{add(num_1, num_2)}"
+
+elsif user_entry == "4"
+  puts "You have selected subtration"
+  puts "The output of #{num_1} and #{num_2} is #{subtract(num_1, num_2)}"
+
+elsif user_entry == "5"
+  puts "You have selected Modulo"
+  puts "The output of #{num_1} and #{num_2} is #{modulo(num_1, num_2)}"
+
+else
+  puts "Invalid Entry"  
+
+end        
